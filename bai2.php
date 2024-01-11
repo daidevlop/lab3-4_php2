@@ -38,5 +38,5 @@ $employee = new Employee('Tran Duc Dai', 19, 10000000, 'Developer');
 echo $employee->getEmployee();
 echo '<br>';
 
-$manager = new Manager('Tran Van B', 25, 10000000, 'Developer', '2020-01-01', 'Manager');
+$manager = new Manager('Tran Van B', 25, 10000000, 'Sếp của Developer', '2020-01-01', 'Manager');
 echo $manager->getManager();
