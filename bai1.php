@@ -26,6 +26,15 @@ class Animal
 
 class Dog extends Animal
 {
+    public $diChuyen;
+    public function setDiChuyen($diChuyen)
+    {
+        echo $this->diChuyen = $diChuyen;
+    }
+    public function diChuyen()
+    {
+        echo $this->diChuyen;
+    }
     public function keu()
     {
         echo $this->keu;
@@ -45,6 +54,15 @@ class Dog extends Animal
 }
 class Cat extends Animal
 {
+    public $diChuyen;
+    public function setDiChuyen($diChuyen)
+    {
+        echo $this->diChuyen = $diChuyen;
+    }
+    public function diChuyen()
+    {
+        echo $this->diChuyen;
+    }
     public function chieuCao()
     {
         echo $this->chieuCao;
@@ -64,6 +82,15 @@ class Cat extends Animal
 }
 class Bird extends Animal
 {
+    public $diChuyen;
+    public function setDiChuyen($diChuyen)
+    {
+        echo $this->diChuyen = $diChuyen;
+    }
+    public function diChuyen()
+    {
+        echo $this->diChuyen;
+    }
     public function chieuCao()
     {
         echo $this->chieuCao;
@@ -88,7 +115,7 @@ $dog->setAn('Com');
 $dog->setChan(2);
 $dog->setKeu('Gau Gau');
 $dog->setChan(4);
-$dog->chan();
+$dog->setDiChuyen('di');
 
 echo 'Lop Cat: <br>';
 $cat = new Cat();
@@ -96,15 +123,17 @@ $cat->setChieuCao(30);
 $cat->setAn('ca');
 $cat->setKeu('meo meo');
 $dog->setChan(4);
-$cat->chan();
+$cat->setDiChuyen('di');
 
-echo 'Lop chim';
+
+echo 'Lop Chim:';
 $bird = new Bird();
 $bird->setChieuCao(10);
 $bird->setAn('sau');
 $bird->setKeu('chim chim');
 $bird->setChan(2);
-$bird->chan();
+$bird->setDiChuyen('bay');
+
 
 
 ?>
@@ -133,5 +162,11 @@ $bird->chan();
         <td><?= $dog->chan(); ?></td>
         <td><?= $cat->chan(); ?></td>
         <td><?= $bird->chan(); ?></td>
+    </tr>
+    <tr>
+        <td>Di chuyen</td>
+        <td><?= $dog->diChuyen();?></td>
+        <td><?= $cat->diChuyen();?></td>
+        <td><?= $bird->diChuyen();?></td>
     </tr>
 </table>
